@@ -25,7 +25,8 @@
 
 ## Packaging improvements
 
-* [ ] first NuGet.org publish once Core APIs needed by dependents are present;
+* [x] ~~~local restore / build / test / pack smoke (`./build.sh` → **Diagnosticism.0.1.0.nupkg**)~~~ - ✅;
+* [ ] first NuGet.org publish (**0.1.0** via GitHub Release / **release.yml**);
 * [x] ~~~decide whether Testing ships as a second package or stays in-tree only~~~ - ✅ ships in main **Diagnosticism** package;
 * [ ] align package / assembly versioning with sibling **Diagnosticism.*** releases;
 
