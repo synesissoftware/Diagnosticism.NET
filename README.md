@@ -16,6 +16,7 @@ Basic diagnostic facilities, for .NET
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Quick start](#quick-start)
+- [Components](#components)
 - [Platform support](#platform-support)
 - [Repository layout](#repository-layout)
 - [Building from source](#building-from-source)
@@ -35,8 +36,8 @@ library programming. The first **Diagnosticism** library was a C library
 with a C++ wrapper. There have been several implementations in other
 languages. **Diagnosticism.NET** is the **.NET** version.
 
-This repository currently ships a cross-platform SDK-style shell (library
-stub, tests, sample, CI, and NuGet packaging). The historical Core /
+This repository ships an SDK-style multi-target library (`net8.0`,
+`netstandard2.0`) with CI and NuGet packaging. Further recovered Core /
 Testing APIs will be integrated in later steps.
 
 
@@ -53,12 +54,28 @@ See [INSTALL.md](./INSTALL.md) for source checkout restore, build, and test.
 
 ```csharp
 using Diagnosticism;
+using Diagnosticism.Reflection;
 
 Console.WriteLine($"Diagnosticism.NET {LibraryVersion.VersionString}");
+
+var attrs = new { verbose = true, path = "." };
+IDictionary<string, object?> map = AnonymousUtil.ConvertToDictionary(
+    attrs,
+    StructureConversionOptions.None);
 ```
 
 See [`samples/Diagnosticism.NET.QuickStart`](./samples/Diagnosticism.NET.QuickStart) for a
 runnable example. A short index is in [EXAMPLES.md](./EXAMPLES.md).
+
+
+## Components
+
+
+### Reflection
+
+* **`AnonymousUtil.IsAnonymousType`** — detect compiler-generated anonymous types;
+* **`AnonymousUtil.ConvertToDictionary`** — map anonymous-type properties to a dictionary (nested anonymous types recursively);
+* **`StructureConversionOptions`** — flags reserved for conversion behaviour;
 
 
 ## Platform support
@@ -121,8 +138,8 @@ Defect reports, feature requests, and pull requests are welcome. See
 
 ### Dependencies
 
-This Step 0 shell has **no** runtime package dependencies. Later steps will
-port the recovered Core / Testing APIs.
+This library has **no** runtime package dependencies. Later steps will port
+remaining recovered Core / Testing APIs.
 
 
 ### Related projects

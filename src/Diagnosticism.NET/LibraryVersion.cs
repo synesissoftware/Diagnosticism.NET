@@ -12,10 +12,10 @@ public static class LibraryVersion
     public const int Major = 0;
 
     /// <summary>Minor version component.</summary>
-    public const int Minor = 0;
+    public const int Minor = 1;
 
     /// <summary>Patch version component.</summary>
-    public const int Patch = 1;
+    public const int Patch = 0;
 
     /// <summary>
     ///  Human-readable version string matching
