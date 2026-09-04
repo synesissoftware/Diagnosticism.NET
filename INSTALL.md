@@ -32,6 +32,9 @@ Or `./build.sh` (Linux / macOS) / `./build.ps1` (Windows PowerShell).
 
 ```csharp
 using Diagnosticism;
+using Diagnosticism.Diagnostics;
+using Diagnosticism.Reflection;
+using Diagnosticism.Testing;
 ```
 
 See [README.md](./README.md) for a Quick start, and [EXAMPLES.md](./EXAMPLES.md) for the sample program.

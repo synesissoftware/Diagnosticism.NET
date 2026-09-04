@@ -16,6 +16,7 @@
 * xUnit coverage for **TimingsMap** recording and aggregate helpers;
 * Ported **Diagnosticism.Testing** **Assist.ExecuteAroundWriter** into the main **Diagnosticism** package (not a second NuGet id);
 * xUnit coverage for writer capture and null-argument behaviour;
+* Expanded **Diagnosticism.NET.QuickStart** and docs to exercise **Reflection**, **TimingsMap**, and **Assist**;
 
 
 <!-- ########################### end of file ########################### -->

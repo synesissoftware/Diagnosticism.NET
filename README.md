@@ -37,8 +37,9 @@ with a C++ wrapper. There have been several implementations in other
 languages. **Diagnosticism.NET** is the **.NET** version.
 
 This repository ships an SDK-style multi-target library (`net8.0`,
-`netstandard2.0`) with CI and NuGet packaging. Further recovered Core /
-Testing APIs will be integrated in later steps.
+`netstandard2.0`) with CI and NuGet packaging. The **0.1.0** surface covers
+**Reflection**, **Diagnostics** (**TimingsMap**), and **Testing**
+(**Assist**).
 
 
 ## Installation
@@ -54,7 +55,9 @@ See [INSTALL.md](./INSTALL.md) for source checkout restore, build, and test.
 
 ```csharp
 using Diagnosticism;
+using Diagnosticism.Diagnostics;
 using Diagnosticism.Reflection;
+using Diagnosticism.Testing;
 
 Console.WriteLine($"Diagnosticism.NET {LibraryVersion.VersionString}");
 
@@ -62,6 +65,11 @@ var attrs = new { verbose = true, path = "." };
 IDictionary<string, object?> map = AnonymousUtil.ConvertToDictionary(
     attrs,
     StructureConversionOptions.None);
+
+TimingsMap<string> timings = new();
+timings.Add("noop", () => { });
+
+string captured = Assist.ExecuteAroundWriter(writer => writer.Write("ok"));
 ```
 
 See [`samples/Diagnosticism.NET.QuickStart`](./samples/Diagnosticism.NET.QuickStart) for a
@@ -149,8 +157,7 @@ Defect reports, feature requests, and pull requests are welcome. See
 
 ### Dependencies
 
-This library has **no** runtime package dependencies. Later steps will port
-remaining recovered Core / Testing APIs.
+This library has **no** runtime package dependencies.
 
 
 ### Related projects

@@ -14,7 +14,7 @@
 * [x] ~~~port recovered **TimingsMap** / **Timing** API and coverage~~~ - ✅;
 * [x] ~~~decide **ExceptionUtil** (implement HRESULT mapping vs drop / TODO)~~~ - ✅ deferred (omit from **0.1.0**);
 * [x] ~~~port recovered **Diagnosticism.Testing** (`Assist`) — package vs test-only~~~ - ✅ in main **Diagnosticism** package;
-* [ ] document and sample Core APIs once ported;
+* [x] ~~~document and sample Core APIs once ported~~~ - ✅;
 * [ ] assess sibling-language facilities (logging / tracing / contingent reporting) for later .NET parity;
 
 
