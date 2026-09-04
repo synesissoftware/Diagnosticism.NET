@@ -71,6 +71,12 @@ runnable example. A short index is in [EXAMPLES.md](./EXAMPLES.md).
 ## Components
 
 
+### Diagnostics
+
+* **`Timing`** — tick / **TimeSpan** result for a measured operation;
+* **`TimingsMap<TKey>`** — execute-around timing keyed by `TKey`, with min / max / mean / frequency helpers;
+
+
 ### Reflection
 
 * **`AnonymousUtil.IsAnonymousType`** — detect compiler-generated anonymous types;
@@ -78,10 +84,9 @@ runnable example. A short index is in [EXAMPLES.md](./EXAMPLES.md).
 * **`StructureConversionOptions`** — flags reserved for conversion behaviour;
 
 
-### Diagnostics
+### Testing
 
-* **`Timing`** — tick / **TimeSpan** result for a measured operation;
-* **`TimingsMap<TKey>`** — execute-around timing keyed by `TKey`, with min / max / mean / frequency helpers;
+* **`Assist.ExecuteAroundWriter`** — execute-around capture of text written to a **TextWriter**;
 
 
 ## Platform support

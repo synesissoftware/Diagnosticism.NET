@@ -14,6 +14,8 @@
 * Null-argument guards and nullable-aware dictionary values (`IDictionary<string, object?>`);
 * Ported **Diagnosticism.Diagnostics** **Timing** / **TimingsMap** (execute-around timing, min / max / mean / frequencies);
 * xUnit coverage for **TimingsMap** recording and aggregate helpers;
+* Ported **Diagnosticism.Testing** **Assist.ExecuteAroundWriter** into the main **Diagnosticism** package (not a second NuGet id);
+* xUnit coverage for writer capture and null-argument behaviour;
 
 
 <!-- ########################### end of file ########################### -->
