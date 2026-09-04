@@ -78,6 +78,12 @@ runnable example. A short index is in [EXAMPLES.md](./EXAMPLES.md).
 * **`StructureConversionOptions`** — flags reserved for conversion behaviour;
 
 
+### Diagnostics
+
+* **`Timing`** — tick / **TimeSpan** result for a measured operation;
+* **`TimingsMap<TKey>`** — execute-around timing keyed by `TKey`, with min / max / mean / frequency helpers;
+
+
 ## Platform support
 
 The library multi-targets:

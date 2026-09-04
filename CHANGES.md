@@ -12,6 +12,8 @@
 * Ported **Diagnosticism.Reflection** from the recovered tree: **AnonymousUtil** (`IsAnonymousType`, `ConvertToDictionary`) and **StructureConversionOptions**;
 * xUnit coverage for empty / scalar / array / nested anonymous conversions and null-argument behaviour;
 * Null-argument guards and nullable-aware dictionary values (`IDictionary<string, object?>`);
+* Ported **Diagnosticism.Diagnostics** **Timing** / **TimingsMap** (execute-around timing, min / max / mean / frequencies);
+* xUnit coverage for **TimingsMap** recording and aggregate helpers;
 
 
 <!-- ########################### end of file ########################### -->

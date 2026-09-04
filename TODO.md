@@ -11,7 +11,7 @@
 ## Functional improvements
 
 * [x] ~~~port recovered **Reflection** API (`AnonymousUtil`, `StructureConversionOptions`) and unit tests~~~ - ✅;
-* [ ] port recovered **TimingsMap** / **Timing** API and coverage;
+* [x] ~~~port recovered **TimingsMap** / **Timing** API and coverage~~~ - ✅;
 * [ ] decide **ExceptionUtil** (implement HRESULT mapping vs drop / TODO);
 * [ ] port recovered **Diagnosticism.Testing** (`Assist`) — package vs test-only;
 * [ ] document and sample Core APIs once ported;
