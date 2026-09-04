@@ -1,0 +1,15 @@
+{
+	"[csharp]": {
+		"editor.insertSpaces": true,
+		"editor.rulers": [
+			76,
+		],
+		"editor.tabSize": 4,
+	},
+	"editor.detectIndentation": false,
+	"editor.rulers": [
+		76,
+	],
+	"files.insertFinalNewline": true,
+	"files.trimTrailingWhitespace": true,
+}
