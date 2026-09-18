@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>$(NetLibVersion);$(NetStandardLibVersion)</TargetFrameworks>
+    <RootNamespace>Diagnosticism</RootNamespace>
+    <AssemblyName>Diagnosticism</AssemblyName>
+
+    <IsPackable>true</IsPackable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <PackageId>Diagnosticism</PackageId>
+    <Title>Diagnosticism.NET</Title>
+    <Description>Basic diagnostic facilities for .NET</Description>
+    <PackageTags>Diagnosticism;diagnostics;dotnet;Synesis</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/synesissoftware/Diagnosticism.NET</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/synesissoftware/Diagnosticism.NET/blob/master/CHANGES.md</PackageReleaseNotes>
+
+    <IsAotCompatible Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net8.0'))">true</IsAotCompatible>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="\" />
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
